@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Register with UK City Tour for updates, events and exclusive offers.">
+    <meta name="keywords" content="UK City Tour register, sign up, events, travel updates, UK tours">
+    <meta name="author" content="Rhidi">
+    <title>UK City Tour | Register</title>
+
+    <link rel="stylesheet" href="css/main.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="container">
+
+<header>
+    <div class="top-header">
+        <a href="index.html" class="logo-link">
+            <img src="images/logo.png" alt="UK City Tour logo" class="logo">
+        </a>
+
+        <div class="brand-text">
+            <h1>UK City Tour</h1>
+            <p>Discover the beauty, history and culture of the UK</p>
+        </div>
+    </div>
+
+    <nav aria-label="Main navigation">
+        <ul class="main-nav">
+            <li><a href="index.html">Home</a></li>
+
+            <li class="dropdown-item">
+                <details>
+                    <summary>About Us</summary>
+                    <ul class="dropdown">
+                        <li><a href="about_us.html#our-story">Our Story</a></li>
+                        <li><a href="about_us.html#our-team">Our Team</a></li>
+                        <li><a href="about_us.html#branches">Branches</a></li>
+                    </ul>
+                </details>
+            </li>
+
+            <li class="dropdown-item">
+                <details>
+                    <summary>Tours</summary>
+                    <ul class="dropdown">
+                        <li><a href="tours.html">Tour Catalogue</a></li>
+                        <li><a href="index.html#featured-tours">Featured Tours</a></li>
+                        <li><a href="tours.html#events">Events and Promotions</a></li>
+                    </ul>
+                </details>
+            </li>
+
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="register.html">Register</a></li>
+
+            <li class="dropdown-item">
+                <details>
+                    <summary>More</summary>
+                    <ul class="dropdown">
+                        <li><a href="index.html#news">Daily News</a></li>
+                        <li><a href="index.html#reviews">Testimonials</a></li>
+                    </ul>
+                </details>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section class="intro">
+        <h2>Register for Updates and Events</h2>
+        <p>
+            Join UK City Tour to receive updates about upcoming tours, events, discounts and exclusive offers.
+            Complete the form below to sign up.
+        </p>
+    </section>
+
+    <section class="form-section">
+        <form id="registerForm" novalidate>
+            <!-- accessibility: clear labels added for screen readers and usability -->
+            <div class="form-group">
+                <label for="fullName">Full Name</label>
+                <input type="text" id="fullName" name="fullName" placeholder="Enter your full name">
+                <small class="error-message"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email address">
+                <small class="error-message"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+                <small class="error-message"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="city">Preferred City Tour</label>
+                <select id="city" name="city">
+                    <option value="">Select a city</option>
+                    <option>London</option>
+                    <option>Edinburgh</option>
+                    <option>Oxford</option>
+                    <option>Bath</option>
+                    <option>Liverpool</option>
+                </select>
+                <small class="error-message"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="eventType">Interested In</label>
+                <select id="eventType" name="eventType">
+                    <option value="">Select an option</option>
+                    <option>Tour Updates</option>
+                    <option>Special Events</option>
+                    <option>Seasonal Promotions</option>
+                    <option>Loyalty Programme</option>
+                </select>
+                <small class="error-message"></small>
+            </div>
+
+            <div class="form-group checkbox-group">
+                <input type="checkbox" id="terms" name="terms">
+                <label for="terms">I agree to receive updates and accept the terms and conditions</label>
+            </div>
+            <small class="error-message checkbox-error"></small>
+
+            <button type="submit" class="btn">Submit Registration</button>
+
+            <p id="successMessage" class="success-message"></p>
+        </form>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2026 UK City Tour. All rights reserved.</p>
+</footer>
+
+</div>
+
+<script src="js/script.js"></script>
+
+
+</body>
+</html>
