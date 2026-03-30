@@ -1,31 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- basic setup so the browser reads it correctly -->
     <meta charset="UTF-8">
+
+    <!-- makes the page responsive on different devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- these help describe the page and support SEO -->
     <meta name="description" content="Browse our UK city tours including London, Edinburgh and Oxford. Find the perfect tour for your next trip.">
     <meta name="keywords" content="UK tours, London tour, Edinburgh tour, Oxford tour, travel UK">
     <meta name="author" content="Rhidi">
+
+    <!-- page title shown in the tab -->
     <title>UK City Tour | Tours</title>
 
+    <!-- linking the main stylesheet so it stays consistent with other pages -->
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
 
 <div class="container">
 
+<!-- same header used across all pages for consistency -->
 <header>
     <div class="top-header">
+
+        <!-- logo links back to homepage -->
         <a href="index.html">
             <img src="images/logo.png" alt="UK City Tour logo" class="logo">
         </a>
 
+        <!-- brand name and tagline -->
         <div class="brand-text">
             <h1>UK City Tour</h1>
             <p>Discover the beauty, history and culture of the UK</p>
         </div>
     </div>
 
+    <!-- navigation is reused so users always know how to move around the site -->
     <nav>
         <ul class="main-nav">
             <li><a href="index.html">Home</a></li>
@@ -41,12 +54,14 @@
                 </details>
             </li>
 
+            <!-- this dropdown links to both this page and sections within it -->
             <li class="dropdown-item">
                 <details>
                     <summary>Tours</summary>
                     <ul class="dropdown">
                         <li><a href="tours.html">Tour Catalogue</a></li>
                         <li><a href="index.html#featured-tours">Featured Tours</a></li>
+                        <!-- this one scrolls to the events section on the same page -->
                         <li><a href="#events">Events and Promotions</a></li>
                     </ul>
                 </details>
@@ -70,13 +85,19 @@
 
 <main>
 
+<!-- intro section explains what the page is about -->
 <section class="intro">
     <h2>Tour Catalogue</h2>
     <p>Explore our range of guided tours across the UK. Compare destinations, durations and prices to find the perfect experience.</p>
 </section>
 
+<!-- this section contains the table, which is one of the key requirements -->
 <section class="table-section">
+
+    <!-- I used a table because it’s the best way to display structured data like tours and prices -->
     <table>
+
+        <!-- table header defines what each column represents -->
         <thead>
             <tr>
                 <th>Tour Name</th>
@@ -87,6 +108,7 @@
             </tr>
         </thead>
 
+        <!-- table body contains the actual tour data -->
         <tbody>
             <tr>
                 <td>London Historical Tour</td>
@@ -131,9 +153,11 @@
     </table>
 </section>
 
+<!-- this section is linked from the dropdown using #events -->
 <section id="events" class="cards-section">
     <h2>Events and Promotions</h2>
 
+    <!-- I reused the card layout here to keep the design consistent across the site -->
     <div class="card-grid">
         <article class="card">
             <h3>Spring Discount</h3>
@@ -154,12 +178,14 @@
 
 </main>
 
+<!-- footer kept the same for consistency -->
 <footer>
     <p>&copy; 2026 UK City Tour. All rights reserved.</p>
 </footer>
 
 </div>
 
+<!-- linking JS for dropdown behaviour and interactions -->
 <script src="js/script.js"></script>
 
 </body>

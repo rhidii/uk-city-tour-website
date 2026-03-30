@@ -1,15 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- basic setup so the browser reads the file properly as HTML5 -->
     <meta charset="UTF-8">
+
+    <!-- this makes the page responsive and fit properly on phones and tablets -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- these meta tags help describe the page and support SEO -->
     <meta name="description" content="Register with UK City Tour for updates, events and exclusive offers.">
     <meta name="keywords" content="UK City Tour register, sign up, events, travel updates, UK tours">
     <meta name="author" content="Rhidi">
+
+    <!-- this is the title shown in the browser tab -->
     <title>UK City Tour | Register</title>
 
+    <!-- linking the main CSS file so the page matches the rest of the website -->
     <link rel="stylesheet" href="css/main.css">
 
+    <!-- importing the same Google Font I used across the rest of the site to keep it consistent -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -18,22 +27,28 @@
 
 <div class="container">
 
+<!-- I kept the same header across all pages so the site feels consistent -->
 <header>
     <div class="top-header">
+
+        <!-- the logo links back to the homepage because that's a common website convention -->
         <a href="index.html" class="logo-link">
             <img src="images/logo.png" alt="UK City Tour logo" class="logo">
         </a>
 
+        <!-- brand name and tagline -->
         <div class="brand-text">
             <h1>UK City Tour</h1>
             <p>Discover the beauty, history and culture of the UK</p>
         </div>
     </div>
 
+    <!-- main navigation, same as the rest of the site so users can move around easily -->
     <nav aria-label="Main navigation">
         <ul class="main-nav">
             <li><a href="index.html">Home</a></li>
 
+            <!-- dropdown for about related content -->
             <li class="dropdown-item">
                 <details>
                     <summary>About Us</summary>
@@ -45,6 +60,7 @@
                 </details>
             </li>
 
+            <!-- dropdown for tour related content -->
             <li class="dropdown-item">
                 <details>
                     <summary>Tours</summary>
@@ -56,9 +72,11 @@
                 </details>
             </li>
 
+            <!-- these are direct links because I wanted them to stay easy to access -->
             <li><a href="contact.html">Contact Us</a></li>
             <li><a href="register.html">Register</a></li>
 
+            <!-- extra dropdown for the other homepage sections -->
             <li class="dropdown-item">
                 <details>
                     <summary>More</summary>
@@ -73,6 +91,7 @@
 </header>
 
 <main>
+    <!-- this section introduces the form and tells the user what it's for before they start filling it in -->
     <section class="intro">
         <h2>Register for Updates and Events</h2>
         <p>
@@ -81,12 +100,17 @@
         </p>
     </section>
 
+    <!-- this is the main form section -->
     <section class="form-section">
+
+        <!-- I used novalidate because I wanted to control the validation myself with JavaScript instead of relying on the browser default -->
         <form id="registerForm" novalidate>
-            <!-- accessibility: clear labels added for screen readers and usability -->
+
+            <!-- I added labels for accessibility and clarity so users know exactly what each input is for -->
             <div class="form-group">
                 <label for="fullName">Full Name</label>
                 <input type="text" id="fullName" name="fullName" placeholder="Enter your full name">
+                <!-- this small element is where the error message shows if the field is invalid -->
                 <small class="error-message"></small>
             </div>
 
@@ -102,6 +126,7 @@
                 <small class="error-message"></small>
             </div>
 
+            <!-- I used a dropdown here because it keeps the choices neat and stops users typing random values -->
             <div class="form-group">
                 <label for="city">Preferred City Tour</label>
                 <select id="city" name="city">
@@ -115,6 +140,7 @@
                 <small class="error-message"></small>
             </div>
 
+            <!-- another dropdown for interest type, again this keeps the data cleaner and easier to validate -->
             <div class="form-group">
                 <label for="eventType">Interested In</label>
                 <select id="eventType" name="eventType">
@@ -127,27 +153,33 @@
                 <small class="error-message"></small>
             </div>
 
+            <!-- I included a checkbox for terms because it's realistic and also gives me another thing to validate with JavaScript -->
             <div class="form-group checkbox-group">
                 <input type="checkbox" id="terms" name="terms">
                 <label for="terms">I agree to receive updates and accept the terms and conditions</label>
             </div>
+
+            <!-- separate error area for the checkbox because it doesn't sit inside the same kind of input box -->
             <small class="error-message checkbox-error"></small>
 
+            <!-- submit button to send the form once everything is valid -->
             <button type="submit" class="btn">Submit Registration</button>
 
+            <!-- this paragraph is empty at first, then JavaScript fills it with a success message if the form is valid -->
             <p id="successMessage" class="success-message"></p>
         </form>
     </section>
 </main>
 
+<!-- footer stays the same for consistency across the whole site -->
 <footer>
     <p>&copy; 2026 UK City Tour. All rights reserved.</p>
 </footer>
 
 </div>
 
+<!-- linking the JavaScript file here so the HTML loads first and the validation works after -->
 <script src="js/script.js"></script>
-
 
 </body>
 </html>

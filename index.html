@@ -1,42 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- basic setup for the page so the browser knows it's using HTML5 -->
     <meta charset="UTF-8">
+
+    <!-- this makes the website adjust properly on phones and tablets instead of looking zoomed out -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- I added these meta tags to help with SEO and make the page more descriptive -->
     <meta name="description" content="Explore unforgettable city tours across the United Kingdom with UK City Tour. Discover history, culture, landmarks and exciting travel experiences.">
     <meta name="keywords" content="UK City Tour, city tours, London tour, Edinburgh tour, UK travel, cultural heritage, guided tours">
     <meta name="author" content="Rhidi">
+
+    <!-- this is the title that shows in the browser tab -->
     <title>UK City Tour | Home</title>
 
+    <!-- linking my external CSS file so all the styling stays separate from the HTML -->
     <link rel="stylesheet" href="css/main.css">
 
+    <!-- I used Google Fonts so the website looks a bit more polished and consistent -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
+    <!-- this container keeps the whole page centred and stops it from stretching too wide on big screens -->
     <div class="container">
+
+        <!-- header section for the logo, business name, and navigation -->
         <header>
             <div class="top-header">
+
+                <!-- I made the logo a link back to the homepage because that's a common website convention -->
                 <a href="index.html" class="logo-link">
                     <img src="images/logo.png" alt="UK City Tour logo" class="logo">
                 </a>
 
+                <!-- this is the branding text next to the logo -->
                 <div class="brand-text">
                     <h1>UK City Tour</h1>
                     <p>Discover the beauty, history and culture of the UK</p>
                 </div>
             </div>
 
+            <!-- this is the main navigation for moving around the site -->
             <nav aria-label="Main navigation">
                 <ul class="main-nav">
+
+                    <!-- direct link back to the homepage -->
                     <li><a href="index.html">Home</a></li>
 
+                    <!-- I used details and summary for dropdowns because it made the menu interactive without needing too much extra code -->
                     <li class="dropdown-item">
                         <details>
                             <summary>About Us</summary>
                             <ul class="dropdown">
+                                <!-- these dropdown links take the user to specific sections on the about page -->
                                 <li><a href="about_us.html#our-story">Our Story</a></li>
                                 <li><a href="about_us.html#our-team">Our Team</a></li>
                                 <li><a href="about_us.html#branches">Branches</a></li>
@@ -44,6 +64,7 @@
                         </details>
                     </li>
 
+                    <!-- another dropdown for the tours related content -->
                     <li class="dropdown-item">
                         <details>
                             <summary>Tours</summary>
@@ -55,9 +76,11 @@
                         </details>
                     </li>
 
+                    <!-- direct links for pages I wanted to stay visible in the main nav -->
                     <li><a href="contact.html">Contact Us</a></li>
                     <li><a href="register.html">Register</a></li>
 
+                    <!-- this dropdown is for the extra home page sections so the nav doesn't get too cluttered -->
                     <li class="dropdown-item">
                         <details>
                             <summary>More</summary>
@@ -71,7 +94,10 @@
             </nav>
         </header>
 
+        <!-- main content of the page starts here -->
         <main>
+
+            <!-- hero section is the first thing users see, so I used it to make the homepage feel more inviting and clear -->
             <section class="hero">
                 <div class="hero-text">
                     <h2>Explore iconic UK cities with unforgettable guided tours</h2>
@@ -79,10 +105,13 @@
                         UK City Tour offers exciting and informative city tours across the United Kingdom,
                         helping visitors experience famous landmarks, cultural heritage and local history.
                     </p>
+
+                    <!-- call to action button to encourage people to sign up -->
                     <a href="register.html" class="btn">Sign Up for Updates</a>
                 </div>
             </section>
 
+            <!-- this intro section gives a quick overview of what the business is about -->
             <section class="intro">
                 <article>
                     <h2>Welcome to UK City Tour</h2>
@@ -98,9 +127,11 @@
                 </article>
             </section>
 
+            <!-- featured tours section to highlight a few main tours instead of overwhelming the user with everything at once -->
             <section id="featured-tours" class="cards-section">
                 <h2>Featured Tours</h2>
 
+                <!-- I used cards here because they're easier to scan and look more modern -->
                 <div class="card-grid">
                     <article class="card">
                         <h3>London Historical Tour</h3>
@@ -122,6 +153,7 @@
                 </div>
             </section>
 
+            <!-- this section is for updates and also includes useful external links -->
             <section id="news" class="info-section">
                 <article>
                     <h2>Daily News and Updates</h2>
@@ -131,6 +163,7 @@
                     </p>
                 </article>
 
+                <!-- I used an aside here because these links support the main content but aren't the main focus themselves -->
                 <aside class="resources">
                     <h3>Additional Resources</h3>
                     <ul>
@@ -141,6 +174,7 @@
                 </aside>
             </section>
 
+            <!-- testimonial section helps build trust and makes the business feel more believable -->
             <section id="reviews" class="reviews-section">
                 <h2>What Our Customers Say</h2>
 
@@ -163,11 +197,14 @@
             </section>
         </main>
 
+        <!-- footer stays simple and consistent across the website -->
         <footer>
             <p>&copy; 2026 UK City Tour. All rights reserved.</p>
         </footer>
     </div>
 
 </body>
+
+<!-- linking the JavaScript file at the end so the page loads first before the interactive parts run -->
 <script src="js/script.js"></script>
 </html>

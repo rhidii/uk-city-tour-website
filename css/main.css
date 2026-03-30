@@ -1,15 +1,19 @@
 /* ===== GENERAL STYLES ===== */
+
+/* I used this at the top to remove default spacing from the browser so I had full control over the layout */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* I added smooth scrolling so when users click section links it feels cleaner and less sudden */
 html {
     width: 100%;
     scroll-behavior: smooth;
 }
 
+/* this controls the main look of the whole site, like the font, background colour and text colour */
 body {
     width: 100%;
     overflow-x: hidden;
@@ -19,11 +23,13 @@ body {
     line-height: 1.6;
 }
 
+/* I added this so long words or text don't overflow and break the layout on smaller screens */
 h1, h2, h3, p, li, a, summary, td, th, label {
     overflow-wrap: break-word;
     word-wrap: break-word;
 }
 
+/* these are the sections I linked to from the nav, so I added scroll margin to stop them jumping too close to the top */
 #featured-tours,
 #news,
 #reviews,
@@ -34,6 +40,7 @@ h1, h2, h3, p, li, a, summary, td, th, label {
     scroll-margin-top: 40px;
 }
 
+/* this is the main page wrapper, I used it to keep everything centred and stop the site stretching too wide */
 .container {
     width: 95%;
     max-width: 1024px;
@@ -44,12 +51,15 @@ h1, h2, h3, p, li, a, summary, td, th, label {
 }
 
 /* ===== HEADER ===== */
+
+/* I added a border below the header because it was one of the case study requirements and it also separates the header nicely */
 header {
     border-bottom: 3px solid #2f5d50;
     background-color: #ffffff;
     padding: 1.2rem;
 }
 
+/* I used flexbox here so the logo and brand text can sit next to each other and still wrap if needed */
 .top-header {
     display: flex;
     align-items: center;
@@ -57,11 +67,13 @@ header {
     flex-wrap: wrap;
 }
 
+/* this just makes sure the logo link behaves properly and doesn't overflow */
 .logo-link {
     display: inline-block;
     max-width: 100%;
 }
 
+/* I made the logo scalable so it can shrink on smaller devices and still stay clear */
 .logo {
     width: 180px;
     max-width: 100%;
@@ -72,17 +84,20 @@ header {
     border-radius: 6px;
 }
 
+/* this lets the text next to the logo take up the remaining space */
 .brand-text {
     flex: 1;
     min-width: 0;
 }
 
+/* I made the main heading green so it matches the brand colour and stands out straight away */
 .brand-text h1 {
     color: #2f5d50;
     font-size: 2.2rem;
     margin-bottom: 0.2rem;
 }
 
+/* this tagline is slightly smaller and softer because it's supporting text, not the main focus */
 .brand-text p {
     color: #555;
     font-size: 0.9rem;
@@ -90,10 +105,13 @@ header {
 }
 
 /* ===== NAVIGATION ===== */
+
+/* just gives the nav some spacing under the logo section */
 nav {
     margin-top: 1rem;
 }
 
+/* I used flexbox again for the nav so I could space the links evenly and centre them */
 .main-nav {
     list-style: none;
     display: flex;
@@ -105,10 +123,12 @@ nav {
     margin-bottom: 0.5rem;
 }
 
+/* I needed relative positioning here so the dropdown can be positioned properly under each menu item */
 .main-nav > li {
     position: relative;
 }
 
+/* these are the main link styles, I removed underlines and used the required colours from the case study */
 .main-nav a,
 .resources a,
 summary {
@@ -118,12 +138,14 @@ summary {
     transition: 0.3s;
 }
 
+/* visited links change to brown because that was one of the design requirements */
 .main-nav a:visited,
 .dropdown a:visited,
 .resources a:visited {
     color: #7a5c46;
 }
 
+/* hover and focus change to pink so users can clearly see what they're interacting with */
 .main-nav a:hover,
 .main-nav a:focus,
 .dropdown a:hover,
@@ -135,10 +157,12 @@ summary:focus {
     color: #d88fa0;
 }
 
+/* I used details for the dropdowns, so this helps position them properly */
 .dropdown-item details {
     position: relative;
 }
 
+/* this styles the dropdown title itself, like About Us or Tours */
 .dropdown-item summary {
     list-style: none;
     cursor: pointer;
@@ -146,15 +170,18 @@ summary:focus {
     padding: 0.4rem 0.2rem;
 }
 
+/* this removes the default browser arrow because I wanted to style my own */
 .dropdown-item summary::-webkit-details-marker {
     display: none;
 }
 
+/* this adds my own smaller arrow after the dropdown title */
 .dropdown-item summary::after {
     content: " ▼";
     font-size: 0.7rem;
 }
 
+/* this is the actual dropdown menu styling on larger screens */
 .dropdown {
     list-style: none;
     position: absolute;
@@ -170,6 +197,7 @@ summary:focus {
     z-index: 1000;
 }
 
+/* each dropdown link is block display so the whole line can be clicked more easily */
 .dropdown a {
     display: block;
     padding: 0.6rem 1rem;
@@ -177,6 +205,8 @@ summary:focus {
 }
 
 /* ===== HERO ===== */
+
+/* I used a background image with a green overlay so the text stays readable but the image still shows through */
 .hero {
     background: linear-gradient(rgba(47, 93, 80, 0.6), rgba(47, 93, 80, 0.6)),
     url("../images/hero.jpg") center/cover no-repeat;
@@ -185,21 +215,25 @@ summary:focus {
     text-align: center;
 }
 
+/* this keeps the hero text from stretching too wide across the section */
 .hero-text {
     max-width: 800px;
     margin: 0 auto;
 }
 
+/* bigger heading here because it's the main message of the homepage */
 .hero h2 {
     font-size: 2rem;
     margin-bottom: 1rem;
 }
 
+/* keeps the paragraph readable and centred */
 .hero p {
     max-width: 700px;
     margin: 0 auto 1.5rem;
 }
 
+/* this is the main button style used for links that act like actions */
 .btn {
     display: inline-block;
     background-color: #d88fa0;
@@ -212,6 +246,7 @@ summary:focus {
     cursor: pointer;
 }
 
+/* I made the button hover a slightly darker pink so the interaction feels clear but still consistent */
 .btn:hover,
 .btn:focus {
     background-color: #c77c8e;
@@ -219,6 +254,8 @@ summary:focus {
 }
 
 /* ===== SECTIONS ===== */
+
+/* these are the main content sections, I gave them equal padding so the spacing feels consistent across the site */
 .intro,
 .cards-section,
 .info-section,
@@ -230,6 +267,7 @@ summary:focus {
     max-width: 100%;
 }
 
+/* all these headings use the same green colour so there's repetition across pages */
 .cards-section h2,
 .reviews-section h2,
 .intro h2,
@@ -241,6 +279,7 @@ summary:focus {
     margin-bottom: 1rem;
 }
 
+/* I used CSS grid here because cards are easier to organise in columns than with flexbox */
 .card-grid,
 .contact-grid {
     display: grid;
@@ -249,6 +288,7 @@ summary:focus {
     margin-top: 1rem;
 }
 
+/* this is the main card style I reused a lot to keep the design consistent */
 .card {
     background-color: #f8f6f2;
     border-radius: 12px;
@@ -257,23 +297,27 @@ summary:focus {
     max-width: 100%;
 }
 
+/* card headings use the brand green again so they stand out */
 .card h3 {
     margin-top: 0.3rem;
     color: #2f5d50;
 }
 
+/* prices are pink so they stand out from the normal body text */
 .price {
     margin-top: 0.8rem;
     font-weight: 700;
     color: #d88fa0;
 }
 
+/* I used a 2 column layout here because the main text and the aside need to sit side by side on larger screens */
 .info-section {
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 1.5rem;
 }
 
+/* this removes bullets from the extra resources links and spaces them nicely */
 .resources ul {
     list-style: none;
     margin-top: 0.8rem;
@@ -284,16 +328,20 @@ summary:focus {
 }
 
 /* ===== TABLE ===== */
+
+/* I added horizontal scrolling here just in case the table gets too wide on small screens */
 .table-section {
     overflow-x: auto;
 }
 
+/* this makes the table stretch properly across the section */
 table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 1rem;
 }
 
+/* table headings are dark green with white text so they're easy to separate from the table rows */
 th {
     background-color: #2f5d50;
     color: #ffffff;
@@ -301,20 +349,25 @@ th {
     text-align: left;
 }
 
+/* normal table cells have padding and a light bottom border to keep them readable */
 td {
     padding: 0.8rem;
     border-bottom: 1px solid #e6e0d8;
 }
 
+/* I used alternating row colours to make the table easier to scan */
 tr:nth-child(even) {
     background-color: #f8f6f2;
 }
 
+/* hover effect just gives the table a bit more interactivity */
 tr:hover {
     background-color: #eae4dc;
 }
 
 /* ===== FORM ===== */
+
+/* this styles the whole form box so it stands out from the page background */
 form {
     background-color: #f8f6f2;
     padding: 2rem;
@@ -324,10 +377,12 @@ form {
     margin: 0 auto 2rem;
 }
 
+/* gives space between each form field */
 .form-group {
     margin-bottom: 1.2rem;
 }
 
+/* labels are bold and green so they're easy to read and consistent with the rest of the site */
 .form-group label {
     display: block;
     margin-bottom: 0.4rem;
@@ -335,6 +390,7 @@ form {
     color: #2f5d50;
 }
 
+/* this styles the text inputs and dropdowns */
 .form-group input,
 .form-group select {
     width: 100%;
@@ -347,35 +403,41 @@ form {
     background-color: #ffffff;
 }
 
+/* I kept hover subtle here because I wanted focus to be the main visual feedback instead */
 .form-group input:hover,
 .form-group select:hover {
     border-color: #d8d2ca;
 }
 
+/* focus is pink so users can clearly see which field they're currently typing in */
 .form-group input:focus,
 .form-group select:focus {
     outline: 2px solid #d88fa0;
     border-color: #d88fa0;
 }
 
+/* this is for the checkbox section so the box and text sit next to each other nicely */
 .checkbox-group {
     display: flex;
     align-items: flex-start;
     gap: 0.6rem;
 }
 
+/* stops the checkbox from stretching weirdly */
 .checkbox-group input {
     width: auto;
     margin-top: 0.2rem;
     flex-shrink: 0;
 }
 
+/* checkbox label is kept normal weight so it doesn't feel too heavy visually */
 .checkbox-group label {
     margin-bottom: 0;
     font-weight: 400;
     color: #2a2a2a;
 }
 
+/* error messages are styled in red so validation feedback is clear */
 .error-message {
     display: block;
     margin-top: 0.3rem;
@@ -383,6 +445,7 @@ form {
     font-size: 0.9rem;
 }
 
+/* success message is green to clearly show when the form is valid and submitted */
 .success-message {
     margin-top: 1rem;
     color: #2f5d50;
@@ -390,6 +453,8 @@ form {
 }
 
 /* ===== FOOTER ===== */
+
+/* I kept the footer simple but consistent with the green brand colour */
 footer {
     background-color: #2f5d50;
     color: #ffffff;
@@ -398,11 +463,14 @@ footer {
 }
 
 /* ===== MEDIA QUERIES ===== */
+
+/* this is the tablet breakpoint, I used it to adjust the layout before it starts breaking */
 @media screen and (max-width: 900px) {
     body {
         font-size: 90%;
     }
 
+    /* stack the logo and text so the header fits better on tablets */
     .top-header {
         flex-direction: column;
         align-items: center;
@@ -423,6 +491,7 @@ footer {
         width: 140px;
     }
 
+    /* stack the nav vertically because there wasn't enough horizontal space at this size */
     .main-nav {
         flex-direction: column;
         align-items: center;
@@ -442,6 +511,7 @@ footer {
         text-align: center;
     }
 
+    /* dropdown changes from floating menu to full width stacked layout for smaller screens */
     .dropdown {
         position: static;
         min-width: unset;
@@ -462,15 +532,18 @@ footer {
         opacity: 0.9;
     }
 
+    /* card layouts reduce to 2 columns on tablet */
     .card-grid,
     .contact-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 
+    /* this stacks the info section so the aside goes under the main text */
     .info-section {
         grid-template-columns: 1fr;
     }
 
+    /* hero spacing and heading size are reduced slightly so it fits better */
     .hero {
         padding: 3rem 1rem;
     }
@@ -479,11 +552,13 @@ footer {
         font-size: 1.7rem;
     }
 
+    /* smaller padding for the form on smaller screens */
     form {
         padding: 1.4rem;
     }
 }
 
+/* this is the phone breakpoint, so card sections become a single column */
 @media screen and (max-width: 767px) {
     .card-grid,
     .contact-grid {
@@ -491,6 +566,7 @@ footer {
     }
 }
 
+/* this is for very small phones where spacing and text need tightening even more */
 @media screen and (max-width: 479px) {
     body {
         font-size: 85%;
@@ -508,6 +584,7 @@ footer {
         width: 120px;
     }
 
+    /* I reduced horizontal padding here so the content has more space on very small screens */
     header,
     .intro,
     .cards-section,
