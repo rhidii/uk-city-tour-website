@@ -1,4 +1,4 @@
-/* ===== GENERAL STYLES ===== */
+/*     GENERAL STYLES      */
 
 /* I used this at the top to remove default spacing from the browser so I had full control over the layout */
 * {
@@ -50,7 +50,7 @@ h1, h2, h3, p, li, a, summary, td, th, label {
     overflow: hidden;
 }
 
-/* ===== HEADER ===== */
+/*      HEADER     */
 
 /* I added a border below the header because it was one of the case study requirements and it also separates the header nicely */
 header {
@@ -104,7 +104,7 @@ header {
     opacity: 0.8;
 }
 
-/* ===== NAVIGATION ===== */
+/*      NAVIGATION      */
 
 /* just gives the nav some spacing under the logo section */
 nav {
@@ -204,7 +204,7 @@ summary:focus {
     white-space: nowrap;
 }
 
-/* ===== HERO ===== */
+/*      HERO      */
 
 /* I used a background image with a green overlay so the text stays readable but the image still shows through */
 .hero {
@@ -253,7 +253,7 @@ summary:focus {
     color: #ffffff;
 }
 
-/* ===== SECTIONS ===== */
+/*      SECTIONS      */
 
 /* these are the main content sections, I gave them equal padding so the spacing feels consistent across the site */
 .intro,
@@ -327,7 +327,7 @@ summary:focus {
     margin-bottom: 0.6rem;
 }
 
-/* ===== TABLE ===== */
+/*      TABLE      */
 
 /* I added horizontal scrolling here just in case the table gets too wide on small screens */
 .table-section {
@@ -365,7 +365,7 @@ tr:hover {
     background-color: #eae4dc;
 }
 
-/* ===== FORM ===== */
+/*      FORM    */
 
 /* this styles the whole form box so it stands out from the page background */
 form {
@@ -452,7 +452,7 @@ form {
     font-weight: 600;
 }
 
-/* ===== FOOTER ===== */
+/*       FOOTER       */
 
 /* I kept the footer simple but consistent with the green brand colour */
 footer {
@@ -462,7 +462,7 @@ footer {
     padding: 1rem;
 }
 
-/* ===== MEDIA QUERIES ===== */
+/*       MEDIA QUERIES       */
 
 /* this is the tablet breakpoint, I used it to adjust the layout before it starts breaking */
 @media screen and (max-width: 900px) {
